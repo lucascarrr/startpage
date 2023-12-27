@@ -1,12 +1,39 @@
 :root {
-    --color-bg: #282828;
-    --color-fg: #EADBB2;
-    --color-link: #8F9191;
-    --color-link-visited: #668F8B;
-    --color-link-hover: #FA7921 ;
+  --color-bg-light: #ffffff;
+  --color-fg-light: #282828;
+  --color-link-light: #8f9191;
+  --color-link-visited-light: #668f8b;
+  --color-link-hover-light: #fa7921;
+
+  --color-bg-dark: #282828;
+  --color-fg-dark: #eadbb2;
+  --color-link-dark: #8f9191;
+  --color-link-visited-dark: #668f8b;
+  --color-link-hover-dark: #fa7921;
 }
 
-html, body {
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-bg: var(--color-bg-light);
+    --color-fg: var(--color-fg-light);
+    --color-link: var(--color-link-light);
+    --color-link-visited: var(--color-link-visited-light);
+    --color-link-hover: var(--color-link-hover-light);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: var(--color-bg-dark);
+    --color-fg: var(--color-fg-dark);
+    --color-link: var(--color-link-dark);
+    --color-link-visited: var(--color-link-visited-dark);
+    --color-link-hover: var(--color-link-hover-dark);
+  }
+}
+
+html,
+body {
   background: var(--color-bg);
   color: var(--color-fg);
   font-family: "Fira Code";
@@ -19,8 +46,7 @@ html, body {
 .container {
   display: grid;
   grid-template-columns: 1fr 460px 600px 1fr;
-  grid-template-areas:
-    ". left right .";
+  grid-template-areas: ". left right .";
   column-gap: 80px;
   justify-items: center;
   align-items: center;
@@ -77,7 +103,7 @@ html, body {
 li {
   font-size: 16px;
   list-style-type: none;
-  padding: 5px
+  padding: 5px;
 }
 
 a:link {
