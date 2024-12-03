@@ -6,11 +6,18 @@
   --color-link-visited-light: #668f8b;
   --color-link-hover-light: #fa7921;
 
-  --color-bg-dark: #282828;
+  --color-bg-dark:#2B2A31;
   --color-fg-dark: #eadbb2;
   --color-link-dark: #8f9191;
   --color-link-visited-dark: #668f8b;
   --color-link-hover-dark: #fa7921;
+}
+
+@font-face {
+    font-family: 'Iosevka Nerd Font Mono';
+    src: url('./IosevkaNerdFontMono-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @media (prefers-color-scheme: light) {
@@ -37,7 +44,7 @@ html,
 body {
   background: var(--color-bg);
   color: var(--color-fg);
-  font-family: "Fira Code";
+  font-family: 'Iosevka Nerd Font Mono', monospace;
   height: 100%;
   width: 100%;
   margin: 0;
